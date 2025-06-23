@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e2e8f0;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar{
+    background-color:#1e40af;
+    color: white;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+}
+
+.dashboard-icon {
+    font-size: 2rem;
+    color: white;
+}
+
+.sidebar h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.nav-main {
+    margin-bottom: 3rem;
+}
+
+.nav-main li, .nav-secondary li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+.nav-main li:hover, .nav-secondary li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon {
+    font-size: 1.25rem;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8fafc;
+}
+
+.top-nav {
+    background-color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    max-width: 500px;
+}
+
+.search-icon {
+    font-size: 1.25rem;
+    color: #64748b;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    background-color: #e2e8f0;
+    border-radius: 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notification-icon {
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.user-avatar, .greeting-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fbbf24;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-greeting {
+    display: flex;
+    align-items:center;
+    gap: 1rem;
+}
+
+.greeting-avatar {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+}
+
+.greeting-text p {
+    color: #64748b;
+    margin-bottom: 0.25rem;
+}
+
+.greeting-text h2 {
+    color: #1f2937;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-new, .btn-upload, .btn-share {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-new {
+    background-color: #1e40af;
+    color: white;
+}
+
+.btn-upload {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-share {
+    background-color: #1e293b;
+    color: white;
+}
+
+.btn-new:hover, .btn-upload:hover, .btn-share:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.content-area {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+    padding: 0 2rem 2rem;
+    flex: 1;
+}
+
+.projects-section h3 {
+    color: #1f2937;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #fbbf24;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h4 {
+    color: #1f2937;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.action-icon {
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: #64748b;
+    transition: color 0.2s;
+}
+
+.action-icon:hover {
+    color: #1f2937;
+}
+
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.announcements-section h3, .trending-section h3 {
+    color: #1f2937;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.announcements-card, .trending-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.announcement-item:last-child {
+    border-bottom: none;
+}
+
+.announcement-item h5 {
+    color: #1f2937;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.announcement-item p {
+    color: #64748b;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+}
+
+.trending-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    flex-shrink: 0;
+}
+
+.trending-item:nth-child(1) .trending-avatar {
+    background-color: #ef4444;
+}
+
+.trending-item:nth-child(2) .trending-avatar {
+    background-color: #fbbf24;
+    color: #1f2937;
+}
+
+.trending-item:nth-child(3) .trending-avatar {
+    background-color: #1f2937;
+}
+
+.trending-item:nth-child(4) .trending-avatar {
+    background-color: #ec4899;
+}
+
+.trending-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-username {
+    color: #1f2937;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.trending-project {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+
+
+
+
+
+
+
